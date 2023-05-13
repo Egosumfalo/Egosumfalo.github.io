@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Encriptador de Textos</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="principal">
+		<h1 class="title">Encriptador | Desencriptador de Textos</h1>
+		<div class="input">
+			<!--label for="input-text">Texto:</label-->
+			<textarea id="input-text" name="input-text" class="input-text" placeholder="Ingrese el Texto a Convertir" cols="30" rows="10"></textarea>
+		</div>
+		<ul class="especificaciones">
+			<li>&#187; Ingrese solo letras minúsculas, sin acentos o caracteres especiales</li>
+			<li>&#187; Las letras mayúsculas seran convertidas a minúsculas</li>
+			<li>&#187; Las palabras con acentos se convertiran a palabras sin acento</li>
+		</ul>
+		<div class="buttons">
+			<div class="radio-button">
+				<label for="encrypt-radio">Encriptar:</label>
+				<input type="radio" id="encrypt-radio" name="action" value="encrypt" checked>
+				<label for="decrypt-radio">Desencriptar:</label>
+				<input type="radio" id="decrypt-radio" name="action" value="decrypt">
+			</div>
+			<button class="button" id="convert-button">Convertir</button>	
+			<button class="button" id="copy-button" disabled>Copiar</button>
+		</div>
+		<div class="output">
+			<img src="img/Home.png" alt="" id="img-output">
+			<div class="output-text", id="output-text">
+				<h2 id="output-title">Ningún Mensaje Fue Encontrado</h2>
+				<p id="output-hint">Ingrese el texto a Encriptar | Desencriptar</p>
+				<!--textarea id="output-text-msg" name="output-text-msg" class="output-text-msg" cols="30" rows="10" readonly></textarea-->	
+			</div>		
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+	<footer class="footer">
+		<!--img src="img/bg.jpg"-->
+		<p class="copyright">Desarrollado por Jonatan Arcila &copy; 2023</p>
+	</footer>
+</body>
+</html>
